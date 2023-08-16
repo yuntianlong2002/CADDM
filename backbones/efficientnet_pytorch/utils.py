@@ -326,9 +326,9 @@ def load_pretrained_weights(model, model_name, load_fc=True, advprop=False):
     # url_map_ = url_map_advprop if advprop else url_map
     # state_dict = model_zoo.load_url(url_map_[model_name])
     if "b3" in model_name:
-        state_dict = torch.load('/data/efficientnet/efficientnet-b3-5fb5a3c3.pth')
+        state_dict = torch.load('data/efficientnet/efficientnet-b3-5fb5a3c3.pth')
     else:
-        state_dict = torch.load('/data/efficientnet/efficientnet-b4-6ed6700e.pth')
+        state_dict = torch.load('data/efficientnet/efficientnet-b4-6ed6700e.pth')
     if load_fc:
         model.load_state_dict(state_dict)
     else:
